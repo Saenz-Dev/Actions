@@ -36,17 +36,3 @@ jobs:
 
     - name: LS 
       run: ls -al
-
-name: Test
-
-on: [push]
-
-jobs: 
-  test_build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: ls
-        run: |
-          echo "hola mundo"  >> hola.txt
-          cat hola.txt
