@@ -13,4 +13,4 @@ jobs:
       - name: Test
         env:
           VAR_STEP: "Dentro de step"
-        run: echo "Valor $VAR_STEP"
+        run: echo "Valor $vars.MY_VARIABLE_DOS"
