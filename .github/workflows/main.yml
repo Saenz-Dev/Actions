@@ -1,0 +1,21 @@
+name: Test
+
+on: [push]
+
+jobs: 
+  test_build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: ls
+        run: |
+          echo "hola mundo"  >> hola.txt
+          cat hola.txt
+
+      - name: ls
+        uses: ./.github/actions/my-action
+        with: 
+          message: "Miguel"

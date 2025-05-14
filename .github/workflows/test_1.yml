@@ -1,0 +1,19 @@
+name: Test_1
+
+on: [push]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    
+    env:
+      MY_VAR: Mi variable de entorno
+
+    steps: 
+      - name: Test
+        env:
+          VAR_STEP: "Dentro de step"
+        run: echo "Valor ${{vars.MY_VARIABLE_DOS}}"
+
+      - name: Secret
+        run: echo "Secret ${{ secrets.MY_SECRET}} "
