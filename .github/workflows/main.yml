@@ -11,3 +11,6 @@ jobs:
         run: |
           echo "hola mundo"  >> hola.txt
           cat hola.txt
+
+      - name: ls
+        uses: ./.github/actions/my-action
