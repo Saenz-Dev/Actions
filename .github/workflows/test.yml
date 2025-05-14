@@ -45,5 +45,11 @@ jobs:
     - name: node version
       run: node --version
 
-    - name: Install dependencies
-      run: npm Install
+    - name: PHP
+      uses: shivammathur/setup-php@v4.4.0
+      with: 
+        php-version: '8.1'
+
+    - name: node version
+      run: php --version
+        
