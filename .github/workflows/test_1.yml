@@ -14,3 +14,6 @@ jobs:
         env:
           VAR_STEP: "Dentro de step"
         run: echo "Valor ${{vars.MY_VARIABLE_DOS}}"
+
+      - name: Secret
+        run: echo "Secret ${{ secrets.MY_SECRET}} "
